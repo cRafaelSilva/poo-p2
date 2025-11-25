@@ -4,7 +4,7 @@ namespace App;
 
 class Player
 {
-    //** @var Invenary */
+    //** @var Inventory */
     private string $nickname;
     private int $level;
     private Inventory $inventory;
@@ -70,7 +70,7 @@ class Player
         $newLevel = $this->getLevel() + 1;
         $this->setLevel($newLevel);
         $inventory = $this->getInventory();
-        $inventory->UpdateMaxCapacity($newLevel);
+        $inventory->updateMaxCapacity($newLevel);
     }
 
     public function resume(): string

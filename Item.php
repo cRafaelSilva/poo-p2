@@ -21,7 +21,7 @@ class Item
         return $this->name;
     }
 
-    public function setName($name): void
+    public function setName(string $name): void
     {
 
         $this->name = $name;
@@ -32,7 +32,7 @@ class Item
         return $this->size;
     }
 
-    public function setSize($size): void
+    public function setSize(int $size): void
     {
 
         $this->size = $size;
@@ -43,7 +43,7 @@ class Item
         return $this->class;
     }
 
-    public function setClass($class): void
+    public function setClass(string $class): void
     {
         $this->class = $class;
     }

@@ -10,7 +10,7 @@ class Inventory
 
     public function __construct($maxCapacity = 20)
     {
-        $this->SetmaxCapacity($maxCapacity);
+        $this->setmaxCapacity($maxCapacity);
         $this->setItems();
     }
 
@@ -38,7 +38,7 @@ class Inventory
 
     public function addItem(Item $item): bool
     {
-        if ($item->getSize() <= $this->freeCapacit()) {
+        if ($item->getSize() <= $this->freeCapacity()) {
             $this->items[] = $item;
             return true;
         }
@@ -59,7 +59,7 @@ class Inventory
         return false;
     }
 
-    public function freeCapacit(): int
+    public function freeCapacity(): int
     {
         $occupiedSpace = 0;
         foreach ($this->items as $item) {
